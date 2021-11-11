@@ -88,7 +88,7 @@
 .head-nav a {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  display: flex;
 
   size: 14px;
   cursor: pointer;
@@ -102,7 +102,17 @@ nav {
 .head-nav {
   display: flex;
 }
+.company a {
+  height: 92px;
+  width: 170px;
+  display: flex;
+}
 
+.company svg {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
 .hero-distans {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -116,6 +126,8 @@ nav {
 
   background-repeat: no-repeat;
   background-size: cover;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .card-svg {
@@ -250,6 +262,13 @@ nav {
   justify-content: center;
   margin-bottom: 50px;
 }
+
+.button-portfolio button:hover,
+.button-portfolio button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
 .button-portfolio li:not(:last-child) {
   margin-right: 8px;
 }
@@ -304,23 +323,23 @@ button:focus {
   fill: var(--color-company);
 }
 
-.company li:hover {
+.company a:hover {
   border: 1px solid var(--color-but);
 }
 
-.company li:hover svg {
+.company a:hover svg {
   fill: var(--color-but);
 }
 .company {
   display: flex;
   justify-content: center;
 }
-.company li {
+.company a {
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 4px;
   border: 1px solid var(--color-company);
-  padding: 16px 32px 16px 32px;
 }
 .company li:not(:last-child) {
   margin-right: 30px;
@@ -328,10 +347,14 @@ button:focus {
 .addr {
   color: #ffffff;
   font-weight: 400;
+}
+
+address {
   font-style: normal;
 }
 .footer-poz {
   display: flex;
+  align-items: baseline;
 }
 .footer-poz:not(:last-child) {
   margin-right: 70px;
@@ -340,7 +363,8 @@ button:focus {
   margin-right: 70px;
 }
 .sent {
-  margin-top: 9px;
+  text-transform: uppercase;
+  font-size: 14px;
   color: var(--light-text-color);
 }
 .addr h3 {
@@ -413,7 +437,13 @@ button:focus {
   margin-left: var(--card-set-gep);
   margin-top: var(--card-set-gep);
 }
-.card-set li:hover {
+
+.card-set a {
+  display: block;
+  height: auto;
+  width: auto;
+}
+.card-set a:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
